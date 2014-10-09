@@ -28,7 +28,7 @@ The user has a option  to set the custom redirect pages from selecting the drop 
 
 == Screenshots ==
 
-1. This screen shot description corresponds to defult_menu_list.png:
+1. This screen shot description corresponds to screenshot-1:
    defult menu bar with login/logout
    defult_menu_list.png
 2. This screen shot description corresponds to  Custom_menu.png
