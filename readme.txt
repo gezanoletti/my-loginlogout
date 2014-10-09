@@ -28,11 +28,15 @@ The user has a option  to set the custom redirect pages from selecting the drop 
 
 == Screenshots ==
 
-1. defult menu bar with login/logout
+1. This screen shot description corresponds to defult_menu_list.png:
+   defult menu bar with login/logout
    defult_menu_list.png
-2. Custom menu bar with login/logout
-    Custom_menu.png
-3. Setting the redirect pages on dashboard
+2. This screen shot description corresponds to  Custom_menu.png
+    Custom menu bar with login/logout
+   
+3. This screen shot description corresponds to screenshot-3
+    Setting the redirect pages on dashboard
+
 == Frequently Asked Questions ==
 
 = How do i use this plugin? =
