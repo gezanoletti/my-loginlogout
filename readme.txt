@@ -29,7 +29,9 @@ The user has a option  to set the custom redirect pages from selecting the drop 
 == Screenshots ==
 
 1. defult menu bar with login/logout
+   defult_menu_list.png
 2. Custom menu bar with login/logout
+    Custom_menu.png
 3. Setting the redirect pages on dashboard
 == Frequently Asked Questions ==
 
