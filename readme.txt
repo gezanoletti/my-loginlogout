@@ -1,4 +1,4 @@
-=== Login Logou Plugin ===
+=== My Login Logout Plugin ===
 Contributors: Nagarjun Sonti
 Donate link:#
 Tags: login, logout, redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, else
