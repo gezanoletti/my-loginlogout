@@ -143,16 +143,16 @@ add_filter('wp_nav_menu_items', 'add_login_logout_link', 1, 2);
 add_action('admin_menu', 'plugin_admin_add_page');
 function plugin_admin_add_page()
  {
-	add_options_page( 'custom menu title', 'My Login/logout', 'manage_options', 'login_logout/adminpage.php');
+	add_options_page( 'custom menu title', 'My Login/logout', 'manage_options', 'my-loginlogout/adminpage.php');
 }
  /* Creating Lable on admin side bar  End ******/
-function my_enqueue($hook) {
+function my2_enqueue($hook) {
 
-	if( 'login_logout/adminpage.php' != $hook )
+	if( 'my-loginlogout/adminpage.php' != $hook )
 	return;
 }
  
-add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+add_action( 'admin_enqueue_scripts', 'my2_enqueue' );
 
 
 
