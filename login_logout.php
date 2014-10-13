@@ -46,12 +46,12 @@ if($wpdb->get_var("show tables like '$table_name'") != $table_name) {
 
 	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 	dbDelta($sql);
-
+$frontpage_id = get_option('page_on_front');
 $wpdb->insert( 
 	'wp_mylogin', 
 	array( 
-		'login_page' =>'index.php', 
-		'logout_page' =>'index.php', 
+		'login_page' =>$frontpage_id, 
+		'logout_page' =>$frontpage_id, 
 		'created_date' =>current_time( 'mysql' ), 
 		'modified_date' => '' 
 		) );
