@@ -37,8 +37,13 @@ The user has a option  to set the custom redirect pages from selecting the drop 
 3. This screen shot description corresponds to screenshot-3
     Setting the redirect pages on dashboard
 
+== Changelog ==
+= 2.3 - 2014-10-13 =
+* minor changes
+
 == Frequently Asked Questions ==
 
 = How do i use this plugin? =
 
 Simple just follow the instructions for installation and remember to activate and thats it!
+
