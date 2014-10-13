@@ -32,6 +32,8 @@
 		<table  width="400px" cellpadding="0" cellspacing="0" border="0" class="display" id="example"><tr>
 		<td>Login</td><td><select name="page-dropdown1" >  
     		<option value="index.php"><?php echo attribute_escape(__('Select page')); ?></option> 
+<option value="<?php echo get_option('page_on_front'); ?>"><?php echo attribute_escape(__('Front page')); ?></option>
+
     				<?php 
        				 $pages = get_pages(); 
       					  foreach ($pages as $pagg) {
@@ -45,6 +47,7 @@
 <tr><td>Logout</td><td>
 		<select name="page-dropdown2" > 
     			<option value="index.php"><?php echo attribute_escape(__('Select page')); ?></option> 
+<option value="<?php echo get_option('page_on_front'); ?>"><?php echo attribute_escape(__('Front page')); ?></option>
    			 <?php 
        				 $pages = get_pages(); 
        				 foreach ($pages as $pagg) {
