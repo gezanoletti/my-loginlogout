@@ -71,7 +71,7 @@ $mylogoutid= $user_count->logout_page;
   ?>
 <p>Current Login Redirect page is &nbsp&nbsp=&nbsp<b><?php echo get_the_title($myloginid); ?></b></p>
 <p>Current Logout Redirect page is &nbsp&nbsp=&nbsp<b><?php echo get_the_title($mylogoutid); ?></b></p>
-<a style="float:right;color:red;under;padding-right: 17px;" href="https://wordpress.org/support/view/plugin-reviews/my-loginlogout" target="_blank" >Please  Rate the plugin </a>
+<a style="float:right;color:red;under;padding-right: 17px;" href="https://wordpress.org/support/view/plugin-reviews/my-loginlogout" target="_blank" >Please  Rate this plugin </a>
 <br/>
 
 </div>
