@@ -1,7 +1,7 @@
 === My Login Logout Plugin ===
 Contributors: Nagarjun Sonti
 Donate link:#
-Tags: login, logout, redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, login logout plugin else
+Tags: login, logout,login logout redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, login logout plugin else
 Requires at least: 3.0
 Tested up to:4
 Stable tag: 2.2
