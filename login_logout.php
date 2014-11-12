@@ -98,12 +98,12 @@ function add_login_logout($items, $args)
 	{
 
 
-		$newitems = '<li><a title="Logout" href="'. wp_logout_url($mylogoutid) .'">logout</a></li>';
+		$newitems = '<li><a class="mylllmenu" title="Logout" href="'. wp_logout_url($mylogoutid) .'">logout</a></li>';
 		$items .= $newitems.$variable;
 	}
 	else
 	{
-		$newitems = '<li><a title="Login" href="'. wp_login_url($myloginid) .'">login</a></li>';
+		$newitems = '<li><a class="mylllmenu" title="Login" href="'. wp_login_url($myloginid) .'">login</a></li>';
 		$items .= $newitems;
 	}
 	return $items;
@@ -123,12 +123,12 @@ function add_login_logout_link($items, $args)
 	if(is_user_logged_in())
 		{
 
-			$newitems = '<li><a title="Logout" href="'. wp_logout_url($mylogoutid) .'">logout</a></li>';
+			$newitems = '<li><a  class="mylllmenu" title="Logout" href="'. wp_logout_url($mylogoutid) .'">logout</a></li>';
 			$items .= $newitems;
 		}
 	else
 		{
-			$newitems = '<li><a title="Login" href="'. wp_login_url($myloginid) .'">login</a></li>';
+			$newitems = '<li><a  class="mylllmenu" title="Login" href="'. wp_login_url($myloginid) .'">login</a></li>';
 			$items .= $newitems;
 }
 
