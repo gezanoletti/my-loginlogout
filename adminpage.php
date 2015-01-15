@@ -162,9 +162,10 @@ foreach( $locations as $key=>$location)
     <a style="float:right;color:red;padding-right: 17px;" href="https://wordpress.org/support/view/plugin-reviews/my-loginlogout" target="_blank" >Please  Rate this plugin </a>
     <br/>
 </div>
-</div>
 <div style="color:green"><span style="font-weight:bold;">Note:</span> Deativate the plugin when you want to add new menu-location or changing the theme 
 </div>
+</div>
+
 
 
 
