@@ -42,7 +42,7 @@ it works both custom menu bar as well as defult menu bar
 * minor changes
 
 = 2.3 - 2015-01-15 =
-* User has a choice to display login/logout menus at his selectd theme locations
+* User has a choice to display login/logout menus at  selectd theme locations
 * Custom url for Login redirect page 
 
 == Frequently Asked Questions ==
