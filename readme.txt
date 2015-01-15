@@ -49,5 +49,5 @@ it works both custom menu bar as well as defult menu bar
 
 = How do i use this plugin? =
 
-Simple just follow the instructions for installation and remember to activate and thats it!
+Simple just follow the instructions for installation and remember to activate  thats it!
 
