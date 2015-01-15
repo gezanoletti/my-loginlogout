@@ -1,9 +1,9 @@
 === My Login Logout Plugin ===
 Contributors: Nagarjun Sonti
 Donate link:#
-Tags: login, logout,login logout redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, login logout plugin else
+Tags: login, logout,login logout redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, login logout plugin,cutom page redirect for login,custom url link for login redirect else
 Requires at least: 3.0
-Tested up to:4.1
+Tested up to:4
 Stable tag: 2.3
 License: GPL2 or later
 
@@ -13,9 +13,8 @@ My Login/Logout plugin With this plugin you can now add a real log in/logout ite
 it works both custom menu bar as well as defult menu bar
 
 = Extra Functions =
-The user has a option  to set the custom redirect pages from selecting the drop down lists from  admin page.  
-
-
+->The user has a option  to set the custom redirect pages from selecting the drop down lists from  admin page.
+->The user has a option to set the custom url as a login redirect page.
 
 == Installation ==
 
@@ -36,10 +35,15 @@ The user has a option  to set the custom redirect pages from selecting the drop 
    
 3. This screen shot description corresponds to screenshot-3
     Setting the redirect pages on dashboard
+4. custonm url
 
 == Changelog ==
 = 2.3 - 2014-10-13 =
 * minor changes
+
+= 2.3 - 2015-01-15 =
+* User has a choice to display login/logout menus at his selectd theme locations
+* Custom url for Login redirect page 
 
 == Frequently Asked Questions ==
 
