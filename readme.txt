@@ -13,8 +13,8 @@ My Login/Logout plugin With this plugin you can now add a real log in/logout ite
 it works both custom menu bar as well as defult menu bar
 
 = Extra Functions =
-->The user has a option  to set the custom redirect pages from selecting the drop down lists from  admin page.
-->The user has a option to set the custom url as a login redirect page.
+1.The user has a option  to set the custom redirect pages from selecting the drop down lists from  admin page.
+2.The user has a option to set the custom url as a login redirect page.
 
 == Installation ==
 
