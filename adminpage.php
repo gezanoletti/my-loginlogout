@@ -4,7 +4,13 @@
 <?php
     if ( $_REQUEST['page'] == 'mylogin_send' && isset( $_POST['submit'] ) )
     {  
-        $myclogin_url=mysql_real_escape_string($_POST['custom_login_url']); 
+	$myclogin_url="";
+
+	if(!empty($_POST['custom_login_url']))
+    {
+	$myclogin_url=esc_sql($_POST['custom_login_url']); 
+	}
+        
         if(!empty($myclogin_url)){
         	$valuel=check_loginurl($myclogin_url);
         	$_POST['custom_login_url']=$valuel;        	       	        	
@@ -34,9 +40,9 @@
         <div class="divcontent">
 	        <div class="divlink" id="login-dropdown">
 	        <div class="divlink">Login  </div>
-		        <select name="page-dropdown1" id="page-dropdown1" >  
-		            <option value="index.php"><?php echo attribute_escape(__('Select page')); ?></option> 
-		            <option value="<?php echo get_option('page_on_front'); ?>"><?php echo attribute_escape(__('Front page')); ?></option> 
+		        <select class="myselect" name="page-dropdown1" id="page-dropdown1" >  
+		            <option value="index.php"><?php echo esc_attr(__('Select page')); ?></option> 
+		            <option value="<?php echo get_option('page_on_front'); ?>"><?php echo esc_attr(__('Front page')); ?></option> 
 		                <?php 
 		                $pages = get_pages(); 
 		                foreach ($pages as $pagg) 
@@ -80,9 +86,9 @@
         <div class="divcontent">
 	        <div class="divlink" id="logout-dropdown">
 	        	<div class="divlink">Logout  </div>
-	            <select name="page-dropdown2" id="page-dropdown2"> 
-             		<option value="index.php"><?php echo attribute_escape(__('Select page')); ?></option> 
-	             	<option value="<?php echo get_option('page_on_front'); ?>"><?php echo attribute_escape(__('Front page')); ?></option> 
+	            <select  class="myselect" name="page-dropdown2" id="page-dropdown2"> 
+             		<option value="index.php"><?php echo esc_attr(__('Select page')); ?></option> 
+	             	<option value="<?php echo get_option('page_on_front'); ?>"><?php echo esc_attr(__('Front page')); ?></option> 
 	              <?php 
 	                      $pages = get_pages(); 
 	                      foreach ($pages as $pagg) {

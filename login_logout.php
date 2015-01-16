@@ -110,17 +110,31 @@ function drop_mylocation_table_deactivate()
 {
   global $wpdb;  
   $sql = "DROP TABLE IF EXISTS ".MyLOCATIONTABLE.";";
-  $wpdb->query($sql);    
+  $wpdb->query($sql);
+
+  $sql1 = "DROP TABLE IF EXISTS ".MyLLTABLE.";";
+  $wpdb->query($sql1);    
 }
 
 /* Including css**/
-function add_my_css()
-{    
-wp_enqueue_style( 'mystyle', plugins_url('/css/mystyle.css', __FILE__), false, '1.0.0', 'all');
-wp_enqueue_script( 'jquery-2.0.2-min-js', plugins_url( '/js/jquery-2.0.2-min.js', __FILE__ ));
-wp_enqueue_script( 'myjs', plugins_url( '/js/myjs.js', __FILE__ ));
+
+function my_adding_styles() 
+{
+	wp_register_style('mystyle', plugins_url('/css/mystyle.css', __FILE__),false, '1.0.0', 'all');
+	wp_enqueue_style('mystyle');
 }
-add_action('admin_enqueue_scripts', "add_my_css");
+	 
+add_action( 'admin_enqueue_scripts', 'my_adding_styles' );
+
+function my_adding_scripts() 
+{
+	wp_register_script('jquery-2.0.2-min-js', plugins_url('/js/jquery-2.0.2-min.js', __FILE__), array('jquery'),'2.0.2', true);
+	wp_enqueue_script('jquery-2.0.2-min-js');
+	wp_register_script('myjs', plugins_url('/js/myjs.js', __FILE__), array('jquery'),'1.1', true);
+	wp_enqueue_script('myjs');
+}
+	 
+add_action( 'admin_enqueue_scripts', 'my_adding_scripts' );
 
 /* including css end *******/
 
@@ -297,10 +311,17 @@ function check_loginurl($url){
          return $result;
 }
 /* update the entire table **/
-function update_mylinks($data){
-    $mylogin1=mysql_real_escape_string($data['page-dropdown1']);
-    $mylogout1= mysql_real_escape_string($data['page-dropdown2']);
-    $myclogin_url=mysql_real_escape_string($data['custom_login_url']);    
+function update_mylinks($data){  
+
+    $mylogin1=$data['page-dropdown1'];
+    $mylogout1= $data['page-dropdown2'];
+	
+	$myclogin_url="";
+	if(!empty($data['custom_login_url'])){
+	$myclogin_url=esc_sql($data['custom_login_url']); 
+	}
+
+    
     global $wpdb;
     $wpdb->update( 
        MyLLTABLE, 
