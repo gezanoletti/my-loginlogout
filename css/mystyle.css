@@ -23,6 +23,7 @@
 	font-size: 15px;
 	padding: 6px 6px 6px 7px;
 	margin-right: 10px;
+width:770px;
 }
 .divlink{
 	margin-right: 29px; display: inline;
@@ -30,4 +31,7 @@
 .divcontent{
 	height: 50px;
     padding: 10px;
+}
+.myselect{
+width:300px;
 }
