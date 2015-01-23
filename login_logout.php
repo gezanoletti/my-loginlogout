@@ -128,8 +128,8 @@ add_action( 'admin_enqueue_scripts', 'my_adding_styles' );
 
 function my_adding_scripts() 
 {
-	wp_register_script('jquery-2.0.2-min-js', plugins_url('/js/jquery-2.0.2-min.js', __FILE__), array('jquery'),'2.0.2', true);
-	wp_enqueue_script('jquery-2.0.2-min-js');
+	wp_register_script('jquery', 'http://code.jquery.com/jquery-latest.min.js', false);
+    wp_enqueue_script('jquery');
 	wp_register_script('myjs', plugins_url('/js/myjs.js', __FILE__), array('jquery'),'1.1', true);
 	wp_enqueue_script('myjs');
 }
