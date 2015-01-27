@@ -209,7 +209,7 @@ function add_my_loginlogout_links()
 
 function add_logout_link(){   
     global $mylogoutid;
-    $newitems = '<li><a title="Logout" href="'.wp_logout_url($mylogoutid).'">logout</a></li>';
+    $newitems = '<li><a class="mylllmenu" title="Logout" href="'.wp_logout_url($mylogoutid).'">logout</a></li>';
     return $newitems;
 
 }
@@ -219,10 +219,10 @@ function add_login_link(){
     global $cu_lginurl;
 
     if(!empty($cu_lginurl)){
-          $newitems = '<li><a title="Logout" href="'.$cu_lginurl.'">login</a></li>';
+          $newitems = '<li><a class="mylllmenu" title="Logout" href="'.$cu_lginurl.'">login</a></li>';
           return $newitems;  
         }else{
-           $newitems = '<li><a title="Login" href="'.wp_login_url($myloginid) .'">login</a></li>'; 
+           $newitems = '<li><a class="mylllmenu" title="Login" href="'.wp_login_url($myloginid) .'">login</a></li>'; 
            return $newitems;
         }
 } 
