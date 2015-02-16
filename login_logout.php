@@ -5,7 +5,7 @@ Plugin URI:http://172.10.1.3:8056/Nagarjuna/firstplugin
 Description:With this plugin you can now add a real log in/logout item menu with auto switch when user is logged in or not.it works both Custom menubar as well as Defult menubar.We have a flexibility to set custom redirect pages for login as well as logout.it works both custom menu bar as well as default menu bar 
 Author: Nagarjun Sonti
 Author URI: http://172.10.1.3:8056/Nagarjuna/firstplugin
-Version: 2.3
+Version: 2.4
 License: GPL2 or later
 
 */
