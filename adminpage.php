@@ -115,6 +115,8 @@
         <td >
         <h3 class="my-head">Where You Want </h3>
         <p> Select the Check Box ,where the login/logout link will be active </p>
+        <div style="color:green"><span style="font-weight:bold;">Note:</span> 
+        This section works only for custum menubar</div> 
         </td>
     </tr>
 <?php
