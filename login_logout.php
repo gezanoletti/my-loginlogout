@@ -176,12 +176,15 @@ add_action( 'parse_query', 'wtnerd_global_vars' );
 function add_login_logout($items, $args)
 {
     global $display_menu_locations;
-    foreach($display_menu_locations as $display_menu_location){
+    
+    $items.=add_my_loginlogout_links();
 
-        if($args['theme_location']==$display_menu_location){
-          $items.=add_my_loginlogout_links();  
-        }
-    }   
+    // foreach($display_menu_locations as $display_menu_location){
+
+    //     if($args['theme_location']==$display_menu_location){
+    //       $items.=add_my_loginlogout_links();  
+    //     }
+    // }   
     return $items;
 }
 add_filter('wp_list_pages', 'add_login_logout', 10, 2);
