@@ -151,7 +151,20 @@ function wtnerd_global_vars()
     $myll_links = $wpdb->get_row( "SELECT * FROM ".MyLLTABLE."" );
     $myloginid= get_permalink($myll_links->login_page);
     $mylogoutid= get_permalink($myll_links->logout_page);
-    $cu_lginurl= $myll_links->clogin_url;  
+    
+    if($myll_links->login_page=="index.php"){
+
+        $myloginid= get_permalink();
+        // $mylogoutid= get_permalink($myll_links->logout_page);
+
+    }
+    if($myll_links->logout_page=="index.php"){
+
+        // $myloginid= get_permalink($myll_links->login_page);
+        $mylogoutid= get_permalink();
+    }
+   
+    $cu_lginurl= $myll_links->clogin_url;     
 
     $display_menu_locations=$wpdb->get_col("SELECT menu_locations FROM ".MyLOCATIONTABLE." WHERE value=1");
 }
