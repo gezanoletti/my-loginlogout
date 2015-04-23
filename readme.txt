@@ -3,7 +3,7 @@ Contributors: Nagarjun Sonti
 Donate link:#
 Tags: login, logout,login logout redirect,switcher, wordpress login, wordpress logout, custom menubar, default menubar, menubar links, logout links, login links, login logout switcher, login logout redirect links, login logout redirect pages, login logout plugin,cutom page redirect for login,custom url link for login redirect else
 Requires at least: 3.0
-Tested up to:4.1
+Tested up to:4.2
 Stable tag: 2.3
 License: GPL2 or later
 
