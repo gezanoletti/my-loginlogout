@@ -179,6 +179,7 @@ function add_login_logout($items, $args)
     
     $items.=add_my_loginlogout_links();
 
+
     // foreach($display_menu_locations as $display_menu_location){
 
     //     if($args['theme_location']==$display_menu_location){
@@ -194,12 +195,12 @@ add_filter('wp_list_pages', 'add_login_logout', 10, 2);
 
 /* Custom Menu Bar  **/
 function add_login_logout_link($items, $args)
-{      
-    global $display_menu_locations;    
-    foreach($display_menu_locations as $display_menu_location){
+{
+    global $display_menu_locations;
 
+    foreach($display_menu_locations as $display_menu_location){
         if($args->theme_location==$display_menu_location){
-          $items.=add_my_loginlogout_links();  
+            $items.=add_my_loginlogout_links();
         }
     }
     return $items;
@@ -225,20 +226,56 @@ function add_my_loginlogout_links()
 
 function add_logout_link(){   
     global $mylogoutid;
-    $newitems = '<li><a class="mylllmenu" title="Logout" href="'.wp_logout_url($mylogoutid).'">logout</a></li>';
-    return $newitems;
+	global $current_user;	
+	
+    $newitems = 
+		'<li>'.
+			'<a class="mylllmenu" title="Logout" href="'.wp_logout_url($mylogoutid).'">'.
+				'<i class="fa fa-sign-out" aria-hidden="true"></i> Logout'.
+			'</a>'.
+		'</li>';
+    
+	$logoutMenu = 
+		'<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_right standard">'.
+		
+			'<a href="#">'.
+				'<span data-hover="User"><i class="fa fa-fw fa-user"></i> '.$current_user->display_name .'</span>'.
+			'</a>'.
+			//'<span class="icon-toggle"><i class="fa fa-angle-up"></i></span>'.
+		
 
+			'<ul class="sub-menu">'.
+				'<li class="menu-item menu-item-type-post_type menu-item-object-page">'.
+					'<a href="http://oespeed.com/my-account/"><i class="fa fa-sliders" aria-hidden="true"></i> Profile</a>'.
+				'</li>'.
+				$newitems.
+			'</ul>'.
+		'</li>';
+/*
+		'<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_right standard">'.
+			'<i class="fa fa-fw fa-user"></i>'.                    
+                    '<ul class="sub-menu">'.
+	                    '<li class="menu-item menu-item-type-post_type menu-item-object-page">'.
+                            '<a href="http://oespeed.com/my-account/"><i class="fa fa-sliders" aria-hidden="true"></i> Profile</a>'.
+                        '</li>'.
+                        $newitems.
+                    '</ul>'.
+                    '</li>';					
+*/					
+    return $logoutMenu;
 }
 
 function add_login_link(){
     global $myloginid;   
     global $cu_lginurl;
 
+    $class = 'class="menu-item menu-item-type-post_type menu-item-object-page drop_to_right standard"';
+
     if(!empty($cu_lginurl)){
-          $newitems = '<li><a class="mylllmenu" title="Logout" href="'.$cu_lginurl.'">login</a></li>';
+          $newitems = '<li '.$class.'><a class="mylllmenu" title="Logout" href="'.$cu_lginurl.'"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a></li>';
           return $newitems;  
         }else{
-           $newitems = '<li><a class="mylllmenu" title="Login" href="'.wp_login_url($myloginid) .'">login</a></li>'; 
+           $newitems = '<li '.$class.'><a class="mylllmenu" title="Login" href="'.wp_login_url($myloginid) .'"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a></li>';
            return $newitems;
         }
 } 
