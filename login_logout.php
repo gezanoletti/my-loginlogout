@@ -235,10 +235,11 @@ function add_logout_link(){
 			'</a>'.
 		'</li>';
     
+	$myAccountLink = get_permalink( get_option('woocommerce_myaccount_page_id') );
 	$logoutMenu = 
 		'<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_right standard">'.
 		
-			'<a href="#">'.
+			'<a href="'.$myAccountLink.'">'.
 				'<span data-hover="User"><i class="fa fa-fw fa-user"></i> '.$current_user->display_name .'</span>'.
 			'</a>'.
 			//'<span class="icon-toggle"><i class="fa fa-angle-up"></i></span>'.
@@ -246,7 +247,7 @@ function add_logout_link(){
 
 			'<ul class="sub-menu">'.
 				'<li class="menu-item menu-item-type-post_type menu-item-object-page">'.
-					'<a href="http://oespeed.com/my-account/"><i class="fa fa-sliders" aria-hidden="true"></i> Profile</a>'.
+					'<a href="'.$myAccountLink.'"><i class="fa fa-sliders" aria-hidden="true"></i> Profile</a>'.
 				'</li>'.
 				$newitems.
 			'</ul>'.
