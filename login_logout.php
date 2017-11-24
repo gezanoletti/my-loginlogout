@@ -237,6 +237,11 @@ function add_logout_link(){
     
 	$myAccountLink = get_permalink( get_option('woocommerce_myaccount_page_id') );
 	$logoutMenu = 
+		'<li>'.
+			'<a class="mylllmenu" title="Shopping Cart" href="'.wc_get_cart_url().'">'.
+				'<i class="fa fa-shopping-cart" aria-hidden="true"></i> CART'.
+			'</a>'.
+		'</li>'.
 		'<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_right standard">'.
 		
 			'<a href="'.$myAccountLink.'">'.
@@ -272,12 +277,19 @@ function add_login_link(){
 
     $class = 'class="menu-item menu-item-type-post_type menu-item-object-page drop_to_right standard"';
 
+	$cart_url =
+		'<li>'.
+			'<a class="mylllmenu" title="Shopping Cart" href="'.wc_get_cart_url().'">'.
+				'<i class="fa fa-shopping-cart" aria-hidden="true"></i> CART'.
+			'</a>'.
+		'</li>';
+	
     if(!empty($cu_lginurl)){
           $newitems = '<li '.$class.'><a class="mylllmenu" title="Logout" href="'.$cu_lginurl.'"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a></li>';
-          return $newitems;  
+          return $cart_url.$newitems;  
         }else{
            $newitems = '<li '.$class.'><a class="mylllmenu" title="Login" href="'.wp_login_url($myloginid) .'"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a></li>';
-           return $newitems;
+           return $cart_url.$newitems;
         }
 } 
 
